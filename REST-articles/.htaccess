@@ -1,0 +1,5 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^([a-zA-Z_-]*)$ index.php?name=$1 [nc,qsa]
+RewriteRule articles\/([0-9]*)$ articles.php?newsid=$1 [nc,qsa]
+RewriteRule articles\/other\/([0-9]*)$ articles.php?newsid=$1&other=true [nc,qsa]
